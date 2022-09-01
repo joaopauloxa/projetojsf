@@ -30,14 +30,27 @@ public class Pessoa implements Serializable{
 	
 	private String sexo;
 	
-	//private String[] frameworks;
+	private String[] frameworks;
+	
+	private Boolean ativo;
 	
 	private String login;
 	
 	private String senha;
 	
+	private String perfilUser;
 	
 	
+	
+	
+	public String getPerfilUser() {
+		return perfilUser;
+	}
+
+	public void setPerfilUser(String perfilUser) {
+		this.perfilUser = perfilUser;
+	}
+
 	public String getLogin() {
 		return login;
 	}
@@ -54,14 +67,14 @@ public class Pessoa implements Serializable{
 		this.senha = senha;
 	}
 
- /*
+ 
 	public String[] getFrameworks() {
 		return frameworks;
 	}
 
 	public void setFrameworks(String[] frameworks) {
 		this.frameworks = frameworks;
-	} */
+	} 
 
 	public String getSexo() {
 		return sexo;
@@ -120,6 +133,14 @@ public class Pessoa implements Serializable{
 			return false;
 		Pessoa other = (Pessoa) obj;
 		return Objects.equals(id, other.id);
+	}
+
+	public Boolean getAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(Boolean ativo) {
+		this.ativo = ativo;
 	}
 	
 }
